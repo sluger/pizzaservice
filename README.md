@@ -16,7 +16,7 @@ Repair broken data.json
 cd scripts
 python json_parser.py
 ```
-
+### MongoDB
 Start MongoDB daemon
 ```bash
 mongod --config mongod.conf
@@ -36,6 +36,7 @@ db.pizzas.find()
 db.extras.find()
 ```
 
+### API with Flask
 Start the API (on a Windows based machine)
 ```bash
 . venv/Scripts/activate
@@ -54,4 +55,12 @@ Hit `ctrl + c`
 deactivate
 ```
 
-// TODO: frontend
+### Angular CLI UI
+```bash
+cd ui
+ng serve
+```
+
+The Angular UI is hosted on [localhost:4200](localhost:4200)
+
+Hit `ctrl + c` to stop
