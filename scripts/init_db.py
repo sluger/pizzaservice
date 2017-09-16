@@ -9,7 +9,7 @@ from pymongo import MongoClient
 client = MongoClient()
 db = client.usersnack
 
-with open('assets/pizzas.json') as data:
+with open('../data/json/pizzas.json') as data:
     data = json.load(data)
     db.pizzas.drop()
     db.pizzas.insert_many(data["Pizza"])

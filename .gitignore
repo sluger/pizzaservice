@@ -101,5 +101,6 @@ ENV/
 .mypy_cache/
 
 # app specific
-data/
+data/db/*
 .vscode/
+!data/db/.gitkeep

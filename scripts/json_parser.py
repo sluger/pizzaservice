@@ -57,4 +57,4 @@ class JsonParser:
         return tmp
 
 if __name__ == '__main__':
-    JsonParser('assets/data.json', 'assets/pizzas.json').repair()
+    JsonParser('../data/json/data.json', '../data/json/pizzas.json').repair()
