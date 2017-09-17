@@ -1,42 +1,44 @@
 # usersnack
-
+A simple web app that lets you order pizzas, written with [Flask](http://flask.pocoo.org/) and [Angular CLI](https://github.com/angular/angular-cli), using [MongoDB](https://www.mongodb.com/) for persistence.
 ## Prerequisites
-MongoDB shell version: 3.2
-Node 6.9.0
-NPM 3
+* MongoDB shell version: 3.2
+* Node 6.9.0
+* NPM 3
 
 ## Instructions
 
-// TODO: virtualenv
-
-// TODO: save pip requirements
+Virtualenv
+```bash
+todo: pip install with requirements
+```
 
 Repair broken data.json
 ```bash
 cd scripts
 python json_parser.py
 ```
-### MongoDB
+### Persistence with [MongoDB](https://www.mongodb.com/)
 Start MongoDB daemon
 ```bash
 mongod --config mongod.conf
 ```
 
-create db and insert data into collections
+Generate database and insert pizzas and extras into collections
 ```bash
 cd scripts
 python init_db.py
 ```
 
-Connect to db for debugging reasons
+Connect to MongoDB shell for debugging reasons
 ```bash
 mongo usersnack
 show collections
 db.pizzas.find()
 db.extras.find()
+db.orders.find()
 ```
 
-### API with flask
+### API with [Flask](http://flask.pocoo.org/)
 Start the API (on a Windows based machine)
 ```bash
 . venv/Scripts/activate
@@ -53,9 +55,7 @@ Hit `ctrl + c`
 deactivate
 ```
 
-// TODO: testing
-
-### Angular CLI UI
+### UI with [Angular CLI](https://github.com/angular/angular-cli)
 ```bash
 cd ui
 ng serve
@@ -65,4 +65,25 @@ The Angular UI is hosted on [http://localhost:4200](http://localhost:4200)
 
 Hit `ctrl + c` to stop
 
-// TODO: testing
+### TODOs
+* Pip install with requirements
+* Create Angular components
+* Finish endpoints
+* Import UI library e.g. [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
+* Responsive layout
+* Setup mail server
+* Test on Linux
+* Test with multiple browsers
+
+### Future work
+* Cleanup python code
+* Improve json validator
+* Tune MongoDB configuration
+* Flask unit testing
+* Angular unit testing
+* Angular end-to-end testing
+* Development and production environment
+* Ahead of Time Compilation
+* Tree shaking
+* Sass support
+* Enable SSL
