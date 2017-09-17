@@ -20,7 +20,7 @@ cd usersnack
 virtualenv venv
 ```
 
-Activate virtualenv
+Activate virtualenv (on a Windows based machine)
 ```bash
 . venv/Scripts/activate
 ```
