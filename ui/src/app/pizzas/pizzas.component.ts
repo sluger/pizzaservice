@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { PizzasService } from './pizzas.service';
+import { Pizza } from '../../models/Pizza';
 
 @Component({
   selector: 'pizzas',
@@ -9,14 +10,14 @@ import { PizzasService } from './pizzas.service';
   styleUrls: ['./pizzas.component.css']
 })
 export class PizzasComponent implements OnInit {
-  public pizzas: any[];
+  public pizzas: Array<Pizza>;
 
   constructor(private pizzasService: PizzasService) { }
 
   ngOnInit() {
     this.pizzasService.pizzas().subscribe(
-      (next) => { this.pizzas = next; },
-      (error) => { console.log(error) },
+      next => this.pizzas = <Array<Pizza>>next,
+      error => console.log(error),
     )
   }
 

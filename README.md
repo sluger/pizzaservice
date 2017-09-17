@@ -67,8 +67,6 @@ The Angular UI is hosted on [http://localhost:4200](http://localhost:4200)
 Hit `ctrl + c` to stop
 
 ### TODOs
-* Pip install with requirements
-* Typescript models
 * Create Angular components
 * Finish endpoints
 * Import UI library e.g. [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
@@ -78,6 +76,8 @@ Hit `ctrl + c` to stop
 * Test with multiple browsers
 
 ### Future work
+* Improve logging
+* Improve error handling
 * Cleanup python code
 * Improve json validator
 * Tune MongoDB configuration
