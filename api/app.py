@@ -21,13 +21,10 @@ cors = CORS(app, resources={r"/api/v1/*": {"origins": "http://localhost:4200"}})
 
 base_path = '/api/v1/'
 
-pizzas = []
-extras = []
-orders = []
-
 class Pizzas(Resource):
     def get(self):
         """GET all pizzas"""
+        pizzas = []
         cursor = mongo.db.pizzas.find()
         for item in cursor:
             pizzas.append(item)
@@ -43,6 +40,7 @@ class Pizza(Resource):
 class Extras(Resource):
     def get(self):
         """GET all extras"""
+        extras = []
         cursor = mongo.db.extras.find()
         for item in cursor:
             extras.append(item)
@@ -51,6 +49,7 @@ class Extras(Resource):
 class Orders(Resource):
     def get(self):
         """GET all orders"""
+        orders = []
         cursor = mongo.db.orders.find()
         for item in cursor:
             orders.append(item)
