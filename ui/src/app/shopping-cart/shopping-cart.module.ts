@@ -4,10 +4,12 @@ import { ShoppingCartComponent } from './shopping-cart.component';
 import { ShoppingCartService } from './shopping-cart.service';
 import { RouterModule } from '@angular/router';
 import { PipesModule } from '../pipes/pipes.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     RouterModule,
     PipesModule,
   ],

@@ -12,15 +12,19 @@ export class ShoppingCartService {
   public getCart(): Order {
     let cart = localStorage.getItem('cart');
     if (!cart) {
-      let emptyCart = {
-        pizzas: [],
-        name: "",
-        address: "",
-        total: 0,
-      }
-      localStorage.setItem('cart', JSON.stringify(emptyCart));
+      this.initCart();
     }
     return JSON.parse(cart);
+  }
+
+  private initCart() {
+    let emptyCart = {
+      pizzas: [],
+      name: "",
+      address: "",
+      total: 0,
+    }
+    localStorage.setItem('cart', JSON.stringify(emptyCart));
   }
 
   public addPizzaWithExtras(pizza: Pizza, extras: Array<Extra>) {
@@ -31,12 +35,35 @@ export class ShoppingCartService {
     }
     let cart: Order = this.getCart();
     cart.pizzas.push(item);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    cart.total = this.computeTotal(cart.pizzas);
+    this.updateCart(cart);
   }
 
   public removeItem(index: number) {
     let cart = this.getCart();
     cart.pizzas.splice(index);
+    cart.total = this.computeTotal(cart.pizzas);
+    this.updateCart(cart);
+  }
+
+  public clear() {
+    localStorage.clear();
+    this.initCart();
+  }
+
+  public computeTotal(items: Array<PizzaWithExtra>) {
+    return items && items.length ? items.map(i => i.total).reduce((a, b) => a + b) : 0;
+  }
+
+  public order(name: string, email: string): Order {
+    let cart = this.getCart();
+    cart.name = name;
+    cart.address = email;
+    this.updateCart(cart);
+    return cart;
+  }
+
+  private updateCart(cart: Order) {
     localStorage.setItem('cart', JSON.stringify(cart));
   }
 }

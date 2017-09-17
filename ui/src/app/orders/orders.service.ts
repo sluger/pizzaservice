@@ -15,4 +15,10 @@ export class OrdersService {
       .map((res) => { return res.json() })
       .catch((error) => { return error.message || 'error'; });
   }
+
+  public order(order: Order): Observable<Array<Order>> {
+    return this.http.post('http://localhost:5000/api/v1/orders', order)
+      .map((res) => { return res.json() })
+      .catch((error) => { return error.message || 'error'; });
+  }
 }

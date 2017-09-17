@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Order } from '../../models/Order';
+import { OrdersService } from './orders.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'orders',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent implements OnInit {
+  public orders: Array<Order>;
 
-  constructor() { }
+  constructor(private ordersService: OrdersService) { }
 
   ngOnInit() {
+    this.ordersService.orders().subscribe(
+      next => this.orders = <Array<Order>>next,
+      error => console.log(error),
+    )
   }
 
 }
