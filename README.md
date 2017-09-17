@@ -79,6 +79,7 @@ ng serve
 ```
 
 The Angular UI is hosted on [http://localhost:4200](http://localhost:4200)
+Tested with Chrome Version 63.0.3218.0 (Official Build) canary (64-bit)
 
 To stop the web server, hit `ctrl + c`
 
