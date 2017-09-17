@@ -25,7 +25,7 @@
     </li>
   </ul>
   <div *ngIf="cart.pizzas.length > 0" class="panel-order-cart">
-    <p>Total: {{cart.total.toFixed(2)}}</p>
+    <p>Total: USD&nbsp;{{cart.total.toFixed(2)}}</p>
     <form (ngSubmit)="order()" #orderForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
