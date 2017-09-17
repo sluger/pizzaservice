@@ -34,7 +34,6 @@ class Pizza(Resource):
     def get(self, pizza_id):
         """GET a pizza by id"""
         pizza = mongo.db.pizzas.find_one({'id':pizza_id})
-        print(pizza)
         return json.loads(json_util.dumps(pizza))
 
 class Extras(Resource):
