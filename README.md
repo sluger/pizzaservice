@@ -49,8 +49,7 @@ flask run
 
 The API base path is [http://localhost:5000/api/v1/](http://localhost:5000/api/v1/) with CORS enabled
 
-Stop the backend
-Hit `ctrl + c`
+Hit `ctrl + c` to stop
 ```bash
 deactivate
 ```
