@@ -1,3 +1,11 @@
-<p>
-  pizza works!
-</p>
+<div *ngIf="pizza$ | async as pizza">
+  <h1>{{ pizza.name }}</h1>
+  <p>USD&nbsp;{{pizza.price.toFixed(2)}}</p>
+  <p>{{pizza.incredients}}</p>
+</div>
+
+<ul>
+  <li *ngFor="let extra of extras">
+    {{extra.name}}, {{extra.price}}
+  </li>
+</ul>

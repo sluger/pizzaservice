@@ -1,6 +1,8 @@
 <h4>Pizzas</h4>
 <ul>
   <li *ngFor="let pizza of pizzas">
-    <pre>{{pizza|json}}</pre>
+    <a [routerLink]="['/pizzas', pizza.id]">
+        {{ pizza.name }}
+      </a>
   </li>
 </ul>
