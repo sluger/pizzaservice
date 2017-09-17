@@ -3,6 +3,7 @@ A simple web app that lets you order pizzas, written with [Flask](http://flask.p
 ## Prerequisites
 * Python 3.6
 * pip 9.0.1
+* virtualenv 15.1.0
 * MongoDB 3.2
 * Node 6.9.0
 * NPM 3
