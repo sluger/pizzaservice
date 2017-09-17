@@ -1,0 +1,29 @@
+.view-wrapper {
+    margin: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.panel-pizza {
+
+}
+
+.panel-content-pizza {
+    
+}
+
+.flex-pizza {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel-img-pizza {
+    height: auto; 
+    width: auto; 
+    max-width: 150px; 
+    max-height: 150px;
+    padding: 0.5rem;
+}

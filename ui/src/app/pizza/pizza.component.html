@@ -1,11 +1,16 @@
-<div *ngIf="pizza$ | async as pizza">
-  <h1>{{ pizza.name }}</h1>
-  <p>USD&nbsp;{{pizza.price.toFixed(2)}}</p>
-  <p>{{pizza.incredients}}</p>
+<div class="view-wrapper">
+  <div *ngIf="pizza$ | async as pizza" class="panel-pizza flex-pizza">
+    <div class="panel-content-pizza">
+      <h3>{{ pizza.name }}</h3>
+      <h4>USD&nbsp;{{pizza.price.toFixed(2)}}</h4>
+      <p>{{pizza.incredients|incredients}}</p>
+    </div>
+    <img src="../../assets/img/{{pizza.img}}" class="panel-img-pizza">
+  </div>
+  <hr>
+  <ul>
+    <li *ngFor="let extra of extras">
+      {{extra.name}}, {{extra.price}}
+    </li>
+  </ul>
 </div>
-
-<ul>
-  <li *ngFor="let extra of extras">
-    {{extra.name}}, {{extra.price}}
-  </li>
-</ul>

@@ -1,8 +1,22 @@
-<h4>Pizzas</h4>
-<ul>
-  <li *ngFor="let pizza of pizzas">
-    <a [routerLink]="['/pizzas', pizza.id]">
-        {{ pizza.name }}
-      </a>
-  </li>
-</ul>
+<div class="view-wrapper">
+  <ul>
+    <li *ngFor="let pizza of pizzas" [routerLink]="['/pizzas', pizza.id]">
+      <div class="card-pizzas flex-pizzas">
+        <div class="card-content-pizzas">
+          <ul>
+            <li>
+              <h3>{{ pizza.name }}</h3>
+            </li>
+            <li>
+              <p>{{pizza.incredients|incredients}}</p>
+            </li>
+            <li>
+              <h4>USD&nbsp;{{pizza.price.toFixed(2)}}</h4>
+            </li>
+          </ul>
+        </div>
+        <img src="../../assets/img/{{pizza.img}}" class="card-img-pizzas">
+      </div>
+    </li>
+  </ul>
+</div>

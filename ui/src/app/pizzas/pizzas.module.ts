@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PizzasComponent } from './pizzas.component';
 import { PizzasService } from './pizzas.service';
 import { RouterModule } from '@angular/router';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     HttpModule,
     RouterModule,
+    PipesModule,
   ],
   providers: [
     PizzasService,

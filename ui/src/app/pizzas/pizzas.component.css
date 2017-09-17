@@ -1,0 +1,37 @@
+.view-wrapper {
+    margin: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-pizzas {
+
+}
+
+.card-pizzas:hover {
+    background-color:#F6F6F6;
+    cursor: pointer;
+}
+
+.card-content-pizzas {
+    padding: 0.5rem;
+    max-width:50%
+}
+
+.flex-pizzas {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    /* height: 10rem; */
+}
+
+.card-img-pizzas {
+    height: auto; 
+    width: auto; 
+    max-width: 150px; 
+    max-height: 150px;
+    padding: 0.5rem;
+}
