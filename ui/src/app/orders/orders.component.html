@@ -1,7 +1,8 @@
 <div class="view-wrapper">
   <h1>Usersnack - My Orders</h1>
 
-  <ul>
+  <p *ngIf="!orders || orders.length === 0">No orders yet</p>
+  <ul *ngIf="orders">
     <li *ngFor="let order of orders;" style="border: 1px solid lightgray; padding:0.5rem;">
       <h3 style="display: flex; justify-content:space-between;">{{ order.name }}<span style="color:gray">{{ order.address }}</span></h3>
       <ul>
