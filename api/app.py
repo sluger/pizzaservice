@@ -17,7 +17,7 @@ app.config['MONGO_DBNAME'] = 'usersnack'
 mongo = PyMongo(app)
 
 api = Api(app)
-cors = CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/api/v1/*": {"origins": "http://localhost:4200"}})
 
 base_path = '/api/v1/'
 
