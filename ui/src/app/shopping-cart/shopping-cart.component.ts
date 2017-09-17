@@ -18,8 +18,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   public removeItem(index: number) {
-
-    console.log(index);
     this.cart.pizzas.splice(index, 1);
     this.cartService.removeItem(index);
   }

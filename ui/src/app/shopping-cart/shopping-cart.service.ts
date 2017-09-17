@@ -31,7 +31,6 @@ export class ShoppingCartService {
     }
     let cart: Order = this.getCart();
     cart.pizzas.push(item);
-    console.log(cart)
     localStorage.setItem('cart', JSON.stringify(cart));
   }
 
