@@ -2,7 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PizzasModule } from './pizzas/pizzas.module';
-import { ExtrasModule } from './extras/extras.module';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { PizzaModule } from './pizza/pizza.module';
+import { OrdersModule } from './orders/orders.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +14,9 @@ import { ExtrasModule } from './extras/extras.module';
   imports: [
     BrowserModule,
     PizzasModule,
-    ExtrasModule,
+    PizzaModule,
+    OrdersModule,
+    AppRoutingModule,
   ],
   providers: [
   ],

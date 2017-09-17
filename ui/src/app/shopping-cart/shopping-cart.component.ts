@@ -10,6 +10,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // TODO: read data from local storage
   }
 
 }
