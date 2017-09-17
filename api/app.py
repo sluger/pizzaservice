@@ -53,26 +53,18 @@ class Orders(Resource):
         for item in cursor:
             orders.append(item)
         return json.loads(json_util.dumps(orders))
-
-class Order(Resource):
-    def get(self, order_id):
-        """GET order by id"""
-        order = mongo.db.orders.find_one({'id':order_id})
-        return json.loads(json_util.dumps(order))
-    def post(self, order_id):
+    def post(self):
         """POST new order"""
-        print(order_id)
-        print(request.json)
-        mongo.db.orders.insert_one(request.json)
+        order = json_util.loads(json_util.dumps(request.json))
+        mongo.db.orders.insert_one(order)
         # TODO: send email
-        pass
+        return request.json
 
 # url mapping
 api.add_resource(Pizzas, base_path + 'pizzas')
 api.add_resource(Pizza, base_path + 'pizzas/<int:pizza_id>')
 api.add_resource(Extras, base_path + 'extras')
 api.add_resource(Orders, base_path + 'orders')
-api.add_resource(Order, base_path + 'orders/<int:order_id>')
 
 # dont use in production mode
 if __name__ == '__main__':
