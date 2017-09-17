@@ -12,7 +12,7 @@
     <div>
       Please select multiple extras:
       <select [(ngModel)]="selectedExtra" (ngModelChange)="onExtraChange($event)" class="form-control" id="extras" required>
-            <option *ngFor="let extra of extras" [ngValue]="extra">{{extra.name|extraName}}</option>
+            <option *ngFor="let extra of extras" [ngValue]="extra">{{extra.name|extraName}}&nbsp;(USD&nbsp;{{extra.price}})</option>
           </select>
       <button class="button" (click)="addExtra(extra)">add</button>
       <div class="panel-chosen-extras-pizza">
@@ -22,3 +22,7 @@
       </div>
     </div>
   </div>
+  <div class="panel-shopping-cart-pizza">
+    <button class="button btn-float-right" (click)="addToShoppingCart()">add to shopping cart</button>
+  </div>
+</div>

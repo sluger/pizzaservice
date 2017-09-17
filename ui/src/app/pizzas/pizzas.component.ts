@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class PizzasComponent implements OnInit {
   public pizzas: Array<Pizza>;
 
-  constructor(private pizzasService: PizzasService, 
+  constructor(private pizzasService: PizzasService,
     private router: Router) { }
 
   ngOnInit() {
@@ -28,5 +28,4 @@ export class PizzasComponent implements OnInit {
     let pizzaId = pizza ? pizza.id : null;
     this.router.navigate(['/pizzas', { id: pizza.id }]);
   }
-
 }

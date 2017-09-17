@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { PizzaModule } from './pizza/pizza.module';
 import { OrdersModule } from './orders/orders.module';
+import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OrdersModule } from './orders/orders.module';
     PizzasModule,
     PizzaModule,
     OrdersModule,
+    ShoppingCartModule,
     AppRoutingModule,
   ],
   providers: [

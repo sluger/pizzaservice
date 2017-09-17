@@ -7,12 +7,10 @@ ul {
     padding-left: 0;
 }
 
-.panel-pizza {
-
-}
+.panel-pizza {}
 
 .panel-content-pizza {
-
+    padding: 0.5rem;
 }
 
 .flex-pizza {
@@ -21,17 +19,26 @@ ul {
 }
 
 .panel-img-pizza {
-    height: auto; 
-    width: auto; 
-    max-width: 150px; 
+    height: auto;
+    width: auto;
+    max-width: 150px;
     max-height: 150px;
     padding: 0.5rem;
 }
 
 .panel-extras-pizza {
-
+    padding: 0.5rem;
 }
 
 .panel-chosen-extras-pizza {
     margin-top: 0.5rem;
+    min-height: 2rem;
+}
+
+.panel-shopping-cart-pizza {
+    padding-right:0.5rem;
+}
+
+.btn-float-right {
+    float: right;
 }

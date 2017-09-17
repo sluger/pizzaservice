@@ -6,6 +6,7 @@ import { Pizza } from '../../models/Pizza';
 import { Extra } from '../../models/Extra';
 import { ExtrasService } from '../extras/extras.service';
 import { PizzaService } from './pizza.service';
+import { ShoppingCartService } from '../shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'pizza',
@@ -21,7 +22,8 @@ export class PizzaComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router: Router,
     private pizzaService: PizzaService,
-    private extrasService: ExtrasService) { }
+    private extrasService: ExtrasService,
+    private cartService: ShoppingCartService) { }
 
   public ngOnInit() {
     this.pizza$ = this.route.paramMap.switchMap(
@@ -45,7 +47,6 @@ export class PizzaComponent implements OnInit {
 
   public addExtra() {
     this.chosenExtras.push(this.selectedExtra);
-    console.log(this.chosenExtras);
   }
 
   public removeExtra(extra: Extra) {
@@ -54,6 +55,6 @@ export class PizzaComponent implements OnInit {
   }
 
   public addToShoppingCart() {
-    // TODO: 
+    this.pizza$.subscribe(next => this.cartService.addPizzaWithExtras(next, this.chosenExtras));
   }
 }

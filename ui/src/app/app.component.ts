@@ -7,7 +7,5 @@ import { PizzasComponent } from './pizzas/pizzas.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor() {}
-
-  public title = 'Pizza Service - Usersnack';
+  constructor() { }
 }
