@@ -12,7 +12,7 @@ ul {
 }
 
 .panel-content-pizza {
-    
+
 }
 
 .flex-pizza {
@@ -26,4 +26,12 @@ ul {
     max-width: 150px; 
     max-height: 150px;
     padding: 0.5rem;
+}
+
+.panel-extras-pizza {
+
+}
+
+.panel-chosen-extras-pizza {
+    margin-top: 0.5rem;
 }

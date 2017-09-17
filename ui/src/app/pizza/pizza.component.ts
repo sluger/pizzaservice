@@ -15,23 +15,45 @@ import { PizzaService } from './pizza.service';
 export class PizzaComponent implements OnInit {
   public pizza$: Observable<Pizza>;
   public extras: Array<Extra>;
+  public selectedExtra: Extra;
+  public chosenExtras: Array<Extra> = [];
 
   constructor(private route: ActivatedRoute,
     private router: Router,
     private pizzaService: PizzaService,
     private extrasService: ExtrasService) { }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.pizza$ = this.route.paramMap.switchMap(
       (params: ParamMap) => this.pizzaService.pizza(params.get('id')));
     this.extrasService.extras().subscribe(
-      next => this.extras = <Array<Extra>>next,
+      next => {
+        this.extras = <Array<Extra>>next;
+        this.selectedExtra = (this.extras && this.extras instanceof Array && this.extras.length > 0) ? this.extras[0] : null;
+      },
       error => console.log(error),
     )
   }
 
-  goToPizzas() {
-    //this.router.navigate(['/pizzas']);
+  public goToPizzas() {
+    this.router.navigate(['/pizzas']);
   }
 
+  public onExtraChange(event: Extra) {
+    this.selectedExtra = event;
+  }
+
+  public addExtra() {
+    this.chosenExtras.push(this.selectedExtra);
+    console.log(this.chosenExtras);
+  }
+
+  public removeExtra(extra: Extra) {
+    let index = this.chosenExtras.findIndex((e) => e.name === extra.name);
+    this.chosenExtras.splice(index, 1);
+  }
+
+  public addToShoppingCart() {
+    // TODO: 
+  }
 }

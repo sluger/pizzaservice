@@ -8,9 +8,17 @@
     <img src="../../assets/img/{{pizza.img}}" class="panel-img-pizza">
   </div>
   <hr>
-  <ul>
-    <li *ngFor="let extra of extras">
-      {{extra.name}}, {{extra.price}}
-    </li>
-  </ul>
-</div>
+  <div class="panel-extras-pizza">
+    <div>
+      Please select multiple extras:
+      <select [(ngModel)]="selectedExtra" (ngModelChange)="onExtraChange($event)" class="form-control" id="extras" required>
+            <option *ngFor="let extra of extras" [ngValue]="extra">{{extra.name|extraName}}</option>
+          </select>
+      <button class="button" (click)="addExtra(extra)">add</button>
+      <div class="panel-chosen-extras-pizza">
+        <span *ngFor="let extra of chosenExtras">
+          <span (click)="removeExtra(extra)">{{extra.name|extraName}}</span>
+        </span>
+      </div>
+    </div>
+  </div>
