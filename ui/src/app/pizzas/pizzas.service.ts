@@ -10,7 +10,7 @@ export class PizzasService {
   constructor(private http: Http) { }
 
   public pizzas(): Observable<any[]> {
-    return this.http.get('localhost:5000/api/v1/pizzas')
+    return this.http.get('http://localhost:5000/api/v1/pizzas')
       .map((res) => { return res.json() })
       .catch((error) => { return error.message || 'error'; });
   }

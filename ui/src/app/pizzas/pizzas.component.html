@@ -1,1 +1,5 @@
-{{pizzas}}
+<ul>
+  <li *ngFor="let pizza of pizzas">
+    <pre>{{pizza|json}}</pre>
+  </li>
+</ul>
