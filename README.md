@@ -1,12 +1,12 @@
 # usersnack
 A simple web app that lets you order pizzas, written with [Flask](http://flask.pocoo.org/) and [Angular CLI](https://github.com/angular/angular-cli), using [MongoDB](https://www.mongodb.com/) for persistence.
 ## Prerequisites
-* Python 3.6
+* Python 3.6.1
 * pip 9.0.1
 * virtualenv 15.1.0
-* MongoDB 3.2
-* Node 6.9.0
-* NPM 3
+* MongoDB shell version: 3.2.16
+* Node v6.10.1
+* NPM 3.10.10
 
 ## Instructions
 
