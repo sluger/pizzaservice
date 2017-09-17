@@ -66,6 +66,7 @@ Hit `ctrl + c` to stop
 
 ### TODOs
 * Pip install with requirements
+* Typescript models
 * Create Angular components
 * Finish endpoints
 * Import UI library e.g. [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
