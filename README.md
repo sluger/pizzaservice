@@ -67,9 +67,9 @@ The Angular UI is hosted on [http://localhost:4200](http://localhost:4200)
 Hit `ctrl + c` to stop
 
 ### TODOs
-* Create order component
-* Finish endpoints
+* Create order view
 * Import UI library e.g. [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
+* Refactor css
 * Responsive layout
 * Setup mail server
 * Test on Linux
