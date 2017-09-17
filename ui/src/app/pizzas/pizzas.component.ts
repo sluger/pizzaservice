@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { PizzasService } from './pizzas.service';
 import { Subscription } from 'rxjs/Subscription';
+import { PizzasService } from './pizzas.service';
 
 @Component({
   selector: 'pizzas',
