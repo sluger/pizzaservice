@@ -68,6 +68,7 @@ Hit `ctrl + c` to stop
 
 ### TODOs
 * Create Angular components
+* Setup Routing
 * Finish endpoints
 * Import UI library e.g. [https://almsaeedstudio.com/preview](https://almsaeedstudio.com/preview)
 * Responsive layout
