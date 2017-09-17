@@ -24,8 +24,9 @@ ul {
 .flex-pizzas {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid lightgray;
-    /* height: 10rem; */
+    max-height: 12rem;
 }
 
 .card-img-pizzas {
