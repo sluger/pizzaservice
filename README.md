@@ -36,7 +36,7 @@ db.pizzas.find()
 db.extras.find()
 ```
 
-### API with Flask
+### API with flask
 Start the API (on a Windows based machine)
 ```bash
 . venv/Scripts/activate
@@ -45,9 +45,7 @@ export FLASK_DEBUG=1
 flask run
 ```
 
-The API base path is [localhost:5000/api/v1/](localhost:5000/api/v1/)
-
-// TODO: cors?
+The API base path is [http://localhost:5000/api/v1/](http://localhost:5000/api/v1/) with CORS enabled
 
 Stop the backend
 Hit `ctrl + c`
@@ -63,7 +61,7 @@ cd ui
 ng serve
 ```
 
-The Angular UI is hosted on [localhost:4200](localhost:4200)
+The Angular UI is hosted on [http://localhost:4200](http://localhost:4200)
 
 Hit `ctrl + c` to stop
 
