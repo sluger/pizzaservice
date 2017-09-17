@@ -17,7 +17,7 @@
       <button class="button" (click)="addExtra(extra)">add</button>
       <div class="panel-chosen-extras-pizza">
         <span *ngFor="let extra of chosenExtras">
-          <span (click)="removeExtra(extra)">{{extra.name|extraName}}</span>
+          <span (click)="removeExtra(extra)">{{extra.name|extraName}}[x]</span>
         </span>
       </div>
     </div>
