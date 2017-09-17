@@ -55,6 +55,8 @@ Hit `ctrl + c`
 deactivate
 ```
 
+// TODO: testing
+
 ### Angular CLI UI
 ```bash
 cd ui
@@ -64,3 +66,5 @@ ng serve
 The Angular UI is hosted on [localhost:4200](localhost:4200)
 
 Hit `ctrl + c` to stop
+
+// TODO: testing
