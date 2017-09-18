@@ -33,7 +33,7 @@ Install requirements
 pip install -r api/requirements.txt
 ```
 
-Optional: Repair broken data.json
+Optional: Repair broken data.json; the valid json already exists in `data/json/`
 ```bash
 cd scripts
 python json_parser.py
@@ -76,6 +76,8 @@ deactivate
 
 ### UI with [Angular CLI](https://github.com/angular/angular-cli)
 ```bash
+npm install -g @angular/cli
+
 cd ui
 npm install
 ng serve
