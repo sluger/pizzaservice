@@ -33,7 +33,7 @@ Install requirements
 pip install -r api/requirements.txt
 ```
 
-Repair broken data.json
+Optional: Repair broken data.json
 ```bash
 cd scripts
 python json_parser.py
