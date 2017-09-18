@@ -22,9 +22,10 @@ cd usersnack
 virtualenv venv
 ```
 
-Activate virtualenv (on a Windows based machine)
+Activate virtualenv
 ```bash
-. venv/Scripts/activate
+. venv/Scripts/activate # on windows
+. venv/bin/activate # on ubuntu
 ```
 
 Install requirements
