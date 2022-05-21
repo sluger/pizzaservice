@@ -1,4 +1,4 @@
-# usersnack
+# pizzaservice
 A simple web app that lets you order pizzas, written with [Flask](http://flask.pocoo.org/) and [Angular CLI](https://github.com/angular/angular-cli), using [MongoDB](https://www.mongodb.com/) for persistence.
 ## Prerequisites
 These versions were the actual versions of my dev environment
@@ -13,12 +13,12 @@ These versions were the actual versions of my dev environment
 
 Clone repo
 ```bash
-git clone git@github.com:sluger/usersnack.git
+git clone git@github.com:sluger/pizzaservice.git
 ```
 
 Create virtualenv
 ```bash
-cd usersnack
+cd pizzaservice
 virtualenv venv
 ```
 
@@ -60,7 +60,7 @@ db.extras.find()
 ```
 
 ### API with [Flask](http://flask.pocoo.org/)
-Start the API (e.g. on a Windows based machine within the usersnack dir)
+Start the API (e.g. on a Windows based machine within the pizzaservice dir)
 ```bash
 export FLASK_APP=api/app.py
 export FLASK_DEBUG=1
