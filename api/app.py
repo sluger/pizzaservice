@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-usersnack backend and json api
+pizzaservice backend and json api
 """
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse
@@ -13,7 +13,7 @@ import json
 app = Flask(__name__)
 app.config['MONGO_HOST'] = 'localhost'
 app.config['MONGO_PORT'] = 27017
-app.config['MONGO_DBNAME'] = 'usersnack'
+app.config['MONGO_DBNAME'] = 'pizzaservice'
 mongo = PyMongo(app)
 
 api = Api(app)
