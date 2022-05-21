@@ -53,7 +53,7 @@ python init_db.py
 
 Connect to MongoDB shell for debugging reasons
 ```bash
-mongo usersnack
+mongo pizzaservice
 show collections
 db.pizzas.find()
 db.extras.find()

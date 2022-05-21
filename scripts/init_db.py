@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
 """
-create usersnack db and pizzas and extras collections from valid json
+create pizzaservice db and pizzas and extras collections from valid json
 """
 import json
 from pymongo import MongoClient
 
 client = MongoClient('localhost', 27017)
-db = client.usersnack
+db = client.pizzaservice
 
 with open('../data/json/pizzas.json') as data:
     data = json.load(data)
